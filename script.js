@@ -33,7 +33,7 @@ function keyPressed() {
 }
 
 function whileTraining(epoch, loss) {
-    console.log(epochs);
+    console.log(epoch);
 }
 
 function finishedTraining() {
