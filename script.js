@@ -21,6 +21,10 @@ function keyPressed() {
         state = "training";
         console.log('machine training');
         model.normalizeData();
+        let options = {
+            epochs: 200
+        }
+        model.train(options, whileTraining, finishedTraining);
 
     }
 }
