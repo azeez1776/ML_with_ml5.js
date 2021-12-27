@@ -2,6 +2,8 @@ let model;
 
 let state = 'collection';
 
+let targetLabel = 'C'
+
 function setup() {
     createCanve(400, 400);
 
@@ -25,6 +27,16 @@ function keyPressed() {
             epochs: 200
         }
         model.train(options, whileTraining, finishedTraining);
-
+    } else {
+        targetLabel = key.toUpperCase()
     }
+}
+
+function whileTraining() {
+    console.log(epochs);
+}
+
+function finishedTraining() {
+    console.log('Finished Training');
+    state = 'prediction'
 }
