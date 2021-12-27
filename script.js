@@ -40,3 +40,25 @@ function finishedTraining() {
     console.log('Finished Training');
     state = 'prediction'
 }
+
+function mousePressed() {
+    let inputs = {
+        x: mouseX,
+        y: mouseY
+    };
+
+    if (state == 'collection') {
+
+        let target = {
+            label: targetLabel
+        };
+        model.addData(inputs, target);
+        stroke(0);
+        noFill();
+        ellipse(mouseX, mouseY, 24);
+        fill(0);
+        noStroke();
+        textAlign(CENTER, CENTER);
+        text(targetLabel, mouseX, mouseY);
+    }
+}
