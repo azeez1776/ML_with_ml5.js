@@ -5,11 +5,11 @@ let state = 'collection';
 let targetLabel = 'C'
 
 function setup() {
-    createCanve(400, 400);
+    createCanvas(400, 400);
 
     let options = {
-        input: ['x', 'y'],
-        output: ['label'],
+        inputs: ['x', 'y'],
+        outputs: ['label'],
         task: 'classification',
         debug: 'true'
     }
@@ -19,7 +19,7 @@ function setup() {
 }
 
 function keyPressed() {
-    if (key === 't') {
+    if (key == 't') {
         state = "training";
         console.log('machine training');
         model.normalizeData();
@@ -32,7 +32,7 @@ function keyPressed() {
     }
 }
 
-function whileTraining() {
+function whileTraining(epoch, loss) {
     console.log(epochs);
 }
 
