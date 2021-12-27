@@ -15,3 +15,12 @@ function setup() {
     model = ml5.neuralNetwork(options)
     background(255);
 }
+
+function keyPressed() {
+    if (key === 't') {
+        state = "training";
+        console.log('machine training');
+        model.normalizeData();
+
+    }
+}
