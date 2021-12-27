@@ -9,5 +9,7 @@ function setup() {
         task: 'classification',
         debug: 'true'
     }
+
+    model = ml5.neuralNetwork(options)
     background(255);
 }
