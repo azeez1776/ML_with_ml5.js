@@ -1,5 +1,7 @@
 let model;
 
+let state = 'collection';
+
 function setup() {
     createCanve(400, 400);
 
