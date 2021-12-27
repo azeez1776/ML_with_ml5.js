@@ -60,5 +60,7 @@ function mousePressed() {
         noStroke();
         textAlign(CENTER, CENTER);
         text(targetLabel, mouseX, mouseY);
+    } else if (state == 'prediction') {
+        model.classify(inputs, gotResults);
     }
 }
